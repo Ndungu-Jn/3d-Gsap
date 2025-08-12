@@ -1,7 +1,14 @@
 import React from "react";
+import NavBar from "./components/NavBar";
+import HeroSection from "./sections/HeroSection";
 
 const App = () => {
-  return <div className="border border-red-500 text-3xl">App</div>;
+  return (
+    <main>
+      <NavBar />
+      <HeroSection />
+    </main>
+  );
 };
 
 export default App;
