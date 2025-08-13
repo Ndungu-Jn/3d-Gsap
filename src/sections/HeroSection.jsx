@@ -3,7 +3,7 @@ const HeroSection = () => {
     <section className="bg-main-bg">
       <div className="hero-container">
         <img
-          src="public/images/hero-img.png"
+          src="public/images/static-img.png"
           alt="hero-img"
           className="absolute bottom-0 left-1/2 -translate-x-1/2 objects-auto scale-100 md:scale-150"
         />
@@ -23,9 +23,13 @@ const HeroSection = () => {
             </div>
           </div>
           <h2>
-            Live life to the fullest with SPYLT: Shatter boredom and embrace
+            Live life to the fullest with Baobab: Shatter boredom and embrace
             your inner kid with every deliciously smooth chug
           </h2>
+
+          <div className="hero-button">
+            <p>Taste the Baobab</p>
+          </div>
         </div>
       </div>
     </section>
