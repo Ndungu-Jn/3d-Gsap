@@ -15,7 +15,25 @@ const HeroSection = () => {
       opacity: 1,
       y: 0,
       ease: "power1.inOut",
-    });
+    })
+      .to(
+        ".hero-text-scroll",
+        {
+          duration: 1,
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          ease: "circ.out",
+        },
+        "-=0.5"
+      )
+      .from(
+        titleSplit.chars,
+        {
+          yPercent: 200,
+          stagger: 0.02,
+          ease: "power2.out",
+        },
+        "-=0.5"
+      );
   });
 
   return (
@@ -27,7 +45,7 @@ const HeroSection = () => {
           className="absolute bottom-0 left-1/2 -translate-x-1/2 objects-auto scale-100 md:scale-150"
         />
 
-        <div className="hero-content">
+        <div className="hero-content opacity-0">
           <div className="overflow-hidden">
             <h1 className=" hero-title">Freaking Delicious</h1>
           </div>
