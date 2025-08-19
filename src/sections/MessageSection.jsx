@@ -40,15 +40,27 @@ const MessageSection = () => {
       delay: 1,
       scrollTrigger: {
         trigger: ".msg-text-scroll",
-        start: "top 60%",
-
-        markers: true,
+        start: "top 70%",
       },
     });
     revealTl.to(".msg-text-scroll", {
       duration: 1,
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       ease: "circ.inOut",
+    });
+
+    const paragraphTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".message-content p",
+        start: "top center",
+      },
+    });
+    paragraphTl.from(paragraphSplit.words, {
+      yPercent: 300,
+      rotate: 3,
+      ease: "power1.inOut",
+      duration: 1,
+      stagger: 0.01,
     });
   });
 
@@ -60,7 +72,7 @@ const MessageSection = () => {
             <h1 className="first-message">Stir up your fearless past and</h1>
 
             <div
-              style={{ clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" }}
+              style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" }}
               className="msg-text-scroll"
             >
               <div className="bg-light-brown md:pb-5 pb-3 px-5 ">
