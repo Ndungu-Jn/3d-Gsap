@@ -29,6 +29,16 @@ const FlavorTitle = () => {
         markers: true,
       },
     });
+    gsap.from(secondTextSplit.chars, {
+      yPercent: 200,
+      stagger: 0.02,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".flavor-section",
+        start: "top 1%",
+        marker: true,
+      },
+    });
   });
   return (
     <div className="general-title col-center h-full 2xl:gap-32 xl:gap-24 gap-16 ">
