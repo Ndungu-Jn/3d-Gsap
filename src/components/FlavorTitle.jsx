@@ -25,7 +25,7 @@ const FlavorTitle = () => {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       scrollTrigger: {
         trigger: ".flavor-section",
-        start: "top 30%",
+        start: "top 10%",
       },
     });
     gsap.from(secondTextSplit.chars, {
@@ -44,7 +44,7 @@ const FlavorTitle = () => {
         <h1>We have 6</h1>
       </div>
       <div
-        style={{ clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" }}
+        style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" }}
         className="flavor-text-scroll"
       >
         <div className=" bg-mid-brown pb-5 2xl:pt-0 pt-3 2xl:px-5 px=3">
