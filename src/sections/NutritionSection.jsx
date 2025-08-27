@@ -1,6 +1,9 @@
 import { nutrientLists } from "../constants";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
+import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/all";
+import gsap from "gsap";
 
 const NutritionSection = () => {
   const isMobile = useMediaQuery({
@@ -17,6 +20,28 @@ const NutritionSection = () => {
     }
   }, [isMobile]);
 
+  useGSAP(() => {
+    const titleSplit = SplitText.create(".nutrition-title", {
+      type: "chars",
+    });
+    const paragraphSplit = SplitText.create(".nutrition-section p", {
+      type: "words, lines",
+      linesClass: "paragraph-line",
+    });
+    const contentTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".nutrition-section",
+        start: "top center",
+        markers: true,
+      },
+    });
+    contentTl.from(titleSplit.chars, {
+      yPercent: 100,
+      stagger: 0.02,
+      ease: "power2.out",
+    });
+  });
+
   return (
     <section className="nutrition-section">
       <img
@@ -31,7 +56,7 @@ const NutritionSection = () => {
         <div className="relative inline-block md:translate-y-20">
           <div className="general-title relative flex flex-col justify-center items-center gap-24">
             <div className="overflow-hidden place-self-start">
-              <h1>It still does</h1>
+              <h1 className="nutrition-title">It still does</h1>
             </div>
             <div style={{}} className="nutrition-text-scroll place-self-start">
               <div className="bg-yellow-brown pb-5 md:pt-0 pt-3 md:px-5 px-3 inline-block">
