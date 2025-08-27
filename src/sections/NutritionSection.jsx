@@ -1,6 +1,22 @@
-import React from "react";
+import { nutrientLists } from "../constants";
+import { useMediaQuery } from "react-responsive";
+import { useEffect, useState } from "react";
 
 const NutritionSection = () => {
+  const isMobile = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
+
+  const [lists, setLists] = useState(nutrientLists);
+
+  useEffect(() => {
+    if (isMobile) {
+      setLists(nutrientLists.slice(0, 3));
+    } else {
+      setLists(nutrientLists);
+    }
+  }, [isMobile]);
+
   return (
     <section className="nutrition-section">
       <img
@@ -22,6 +38,33 @@ const NutritionSection = () => {
                 <h2 className="text-milk-yellow">Body Good</h2>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="flex md:justify-center items-center translate-y-5">
+          <div className="md:max-w-xs max-w-md">
+            <p className="text-lg md:text-right text-balance font-paragraph">
+              Milk contains a wide array of nutrients, including vitamins,
+              minerals and protein, and this is lactose free
+            </p>
+          </div>
+        </div>
+
+        <div className="nutrition-box">
+          <div className="list-wrapper">
+            {lists.map((nutrient, index) => (
+              <div key={index} className="relative flex-1 col-center ">
+                <div>
+                  <p className="md:text-lg font-paragraph">{nutrient.label}</p>
+                  <p className="font-paragraph text-sm mt-2">up to</p>
+                  <p className="text-2xl md:text-4xl tracking-tighter font-bold">
+                    {nutrient.amount}
+                  </p>
+                </div>
+                {index !== lists.length - 1 && (
+                  <div className="spacer-border"></div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
