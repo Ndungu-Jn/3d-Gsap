@@ -50,9 +50,8 @@ const NutritionSection = () => {
 
     const titleTl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".nutririon-section",
+        trigger: ".nutrition-section",
         start: "top 80%",
-        markers: true,
       },
     });
     titleTl.to(".nutrition-text-scroll", {
