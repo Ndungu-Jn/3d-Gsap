@@ -3,7 +3,7 @@ const ClipPathTitle = ({ title, color, bg, className, borderColor }) => {
     <div className="general-title">
       <div
         style={{
-          clippath: "",
+          clipPath: "",
           borderColor: borderColor,
         }}
         className={`${className} border-[.5vw] text-nowrap opacity-0 `}
