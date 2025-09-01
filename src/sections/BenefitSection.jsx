@@ -1,3 +1,5 @@
+import ClipPathTitle from "../components/ClipPathTitle";
+
 const BenefitSection = () => {
   return (
     <section className="benefit-section">
@@ -8,7 +10,15 @@ const BenefitSection = () => {
             Explore the Key Benefits of Choosing SPYLT
           </p>
 
-          <div className="mt-20 col-center"></div>
+          <div className="mt-20 col-center">
+            <ClipPathTitle
+              title={"shelf stable"}
+              color={"#faeade"}
+              bg={"#c88e64"}
+              className={"first-title"}
+              borderColor={"#222123"}
+            />
+          </div>
         </div>
       </div>
     </section>
