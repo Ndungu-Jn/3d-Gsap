@@ -1,6 +1,19 @@
-import React from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const VideoPinSection = () => {
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "vd-pin-section",
+        start: "-15% top",
+        end: "200% top",
+        scrub: 1.5,
+        markers: true,
+        pin: true,
+      },
+    });
+  });
   return (
     <section className="vd-pin-section">
       <div style={{}} className="size-full video-box">
@@ -14,7 +27,11 @@ const VideoPinSection = () => {
         <div className="abs-center md:scale-100 scale-200">
           <img src="/images/circle-text.svg" alt="" className="spin-circle" />
           <div className="play-btn">
-            <img src="/images/play.svg" alt="" className="size-[3vw]" />
+            <img
+              src="/images/play.svg"
+              alt=""
+              className="size-[3vw] ml-[.5vw]"
+            />
           </div>
         </div>
       </div>
