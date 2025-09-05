@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
 import { cards } from "../constants";
 
 const TestimonialsSection = () => {
+  const vdRef = useRef([]);
+  const handlePlay = (index) => {
+    const video = vdRef.current[index];
+    console.log(video);
+  };
+
   return (
     <section className="testimonials-section">
       <div className="absolute size-full flex flex-col items-center pt-[5vw]">
@@ -15,8 +21,11 @@ const TestimonialsSection = () => {
           <div
             key={index}
             className={`vd-card ${card.translation} ${card.rotation}`}
+            onMouseEnter={() => handlePlay(index)}
+            onMouseLeave={() => handlePause(index)}
           >
             <video
+              ref={(el) => (vdRef.current[index] = el)}
               src={card.src}
               playsInline
               muted
