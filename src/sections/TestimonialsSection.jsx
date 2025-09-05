@@ -47,6 +47,11 @@ const TestimonialsSection = () => {
         markers: true,
       },
     });
+    pinTl.from(".vd-card", {
+      yPercent: 150,
+      stagger: 0.2,
+      ease: "power1.inOut",
+    });
   });
 
   const handlePlay = (index) => {
