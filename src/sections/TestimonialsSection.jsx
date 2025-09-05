@@ -1,8 +1,54 @@
 import React, { useRef } from "react";
 import { cards } from "../constants";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const TestimonialsSection = () => {
   const vdRef = useRef([]);
+
+  useGSAP(() => {
+    gsap.set(".testimonials-section", {
+      marginTop: "-140vh",
+    });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".testimonials-section",
+        start: "top bottom",
+        end: "200% top",
+        scrub: true,
+      },
+    });
+    tl.to(".testimonials-section .first-title", {
+      xPercent: 70,
+    })
+      .to(
+        ".testimonials-section .sec-title",
+        {
+          xPercent: 25,
+        },
+        "<"
+      )
+      .to(
+        ".testimonials-section .third-title",
+        {
+          xPercent: -50,
+        },
+        "<"
+      );
+
+    const pinTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".testimonials-section",
+        start: "10% top",
+        end: "200% top",
+        scrub: 1.5,
+        pin: true,
+        markers: true,
+      },
+    });
+  });
+
   const handlePlay = (index) => {
     const video = vdRef.current[index];
     video.play();
