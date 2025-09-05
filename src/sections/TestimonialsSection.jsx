@@ -5,7 +5,11 @@ const TestimonialsSection = () => {
   const vdRef = useRef([]);
   const handlePlay = (index) => {
     const video = vdRef.current[index];
-    console.log(video);
+    video.play();
+  };
+  const handlePause = (index) => {
+    const video = vdRef.current[index];
+    video.pause();
   };
 
   return (
