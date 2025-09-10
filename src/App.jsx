@@ -36,7 +36,7 @@ const App = () => {
           </div>
 
           <FooterSection />
-          <div className="h-dvh border border-red-500"> </div>
+          {/* <div className="h-dvh border border-red-500"> </div> */}
         </div>
       </div>
     </main>
