@@ -9,7 +9,7 @@ The goal was to practice frontend skills by recreating the look and feel of an e
 
 ---
 
- ##🎥 Demo
+##🎥 Demo
 
 🔗 Live Website: https://gsapproject1.netlify.app/
 
@@ -30,5 +30,5 @@ The goal was to practice frontend skills by recreating the look and feel of an e
 
  🎥 Demo
 
-🔗 Live Website: gsapproject1.netlify.app
+
 
