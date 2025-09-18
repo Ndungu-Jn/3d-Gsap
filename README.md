@@ -1,12 +1,26 @@
-# React + Vite
+# 🚀 React + GSAP Website Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **website replication** built with **React** and **GSAP (GreenSock Animation Platform)**.  
+The goal was to practice frontend skills by recreating the look and feel of an existing website with smooth animations and interactions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- ⚛️ Built with **React (Vite)** for fast development
+- 🎞️ **GSAP animations** for smooth, modern transitions
+- 🎨 Responsive design for mobile and desktop
+- ⚡ Optimized build using Vite
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- **React (Vite)**
+- **GSAP**
+- **JavaScript (ES6+)**
+- **CSS / Tailwind **
+- **Netlify** (for deployment)
+
+ 🎥 Demo
+
+🔗 Live Website: gsapproject1.netlify.app
+
